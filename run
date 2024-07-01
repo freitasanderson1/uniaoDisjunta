@@ -1,0 +1,16 @@
+#!/bin/bash
+
+conjuntoA_arquivo="conjuntoA.txt"
+conjuntoB_arquivo="conjuntoB.txt"
+
+if [ ! -f "$conjuntoA_arquivo" ]; then
+    echo "Erro: Arquivo $conjuntoA_arquivo não encontrado."
+    exit 1
+fi
+
+if [ ! -f "$conjuntoB_arquivo" ]; then
+    echo "Erro: Arquivo $conjuntoB_arquivo não encontrado."
+    exit 1
+fi
+
+python main.py "$conjuntoA_arquivo" "$conjuntoB_arquivo"
